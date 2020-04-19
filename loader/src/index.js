@@ -14,7 +14,7 @@ var root = document.getElementById('root');
 root.append(img);
 
 var root = document.getElementById('root');
-var fontDiv = new div();
+var fontDiv = document.createElement('div');
 fontDiv.classList.add(iconfont.iconfont)
 fontDiv.classList.add(iconfont.icon-changjingguanli)
 root.append(fontDiv)
