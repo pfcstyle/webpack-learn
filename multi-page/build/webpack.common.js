@@ -17,7 +17,7 @@ const makePlugins = (configs) => {
 			new HtmlWebpackPlugin({
 				template: 'src/index.html',
 				filename: `${item}.html`,
-				chunks: ['runtime', 'vendors', item]
+				chunks: ['runtime', 'vendors', item]//引用目录 
 			})
 		)
 	});
