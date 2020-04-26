@@ -13,8 +13,15 @@ module.exports = {
 		contentBase: './dist',
 		open: true,
 		port: 8080,
-		proxy: {
-			'/api': 'https://localhost:3000'
+		proxy: {//支持多域名  默认根目录不支持，需要配置index: ''  生产环境不会生效
+			// '/api': 'https://localhost:3000'，
+			'/react/api': {
+				target:'http://www.dell-lee.com',
+				pathRewrite: {
+					'header.json': 'demo.json'
+				},
+				changeOrigin: true//突破反爬虫origin 判断
+			}
 		}
 	},
 	entry: {
